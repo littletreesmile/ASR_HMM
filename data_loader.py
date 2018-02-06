@@ -13,7 +13,7 @@ def parse_data(file_name):
         audio data
     """
 
-    current_dir = os.getcwd() + '\\audio_data'
+    current_dir = os.getcwd() + '/audio_data'
     data_path = os.path.join(current_dir, file_name)
     with open(data_path, 'rb') as mysf:
         sound_data = soundfile.read(mysf,channels=2, samplerate=22050, subtype='PCM_16', endian='BIG', format='RAW')
